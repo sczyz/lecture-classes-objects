@@ -589,6 +589,38 @@
                         </code></pre>
                         </div>
                     </section>
+
+                    <section>
+                        <h3> Metaprogramming </h3>
+                        <div style="font-size:30px">
+                        <p class="fragment">
+                            When definition of a class or function is specified (in part or in full)
+                            by code outside the definition itself.
+                        </p>
+                        <p class="fragment">
+                            Example: add an <code>is_particle</code> class attribute to <code>Particle</code> class:
+                        </p>
+                        <pre><code data-trim class="fragment python">
+                            def add_is_particle(cls):
+                                cls.is_particle = True
+                                return cls
+
+                            @add_is_particle
+                            class Particle(object):
+                                """A particle is a constituent unit of the universe.
+
+                                # ... other parts of class definition ...
+                        </code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3> Practical Example </h3>
+                        <br>
+                        <p>
+                            Take a look at my code PyTeCK, which uses classes to hide lots of details of performing simulations:
+                            <a href="https://github.com/kyleniemeyer/PyTeCK">https://github.com/kyleniemeyer/PyTeCK</a>
+                        </p>
                 </section>
 
                 <section>
