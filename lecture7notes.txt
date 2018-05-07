@@ -27,8 +27,10 @@ Lecture 7- Classes and Objects
         -ex: if you create a file "particle.py" with "class Particle(object):" in it, and then you "import particle as p" and then define "part = p.Particle":
             -if you do def __init__(self) and then within define self.c = 1, self.m = 2, self.r = 3, and then blah = 0, when you create an object it will have attributes c, m, and r, but not blah because blah is a local variable instide __init__
                 -i.e.: particle.blah does not exist
-        -All your functions that you define within a class should take the same keyword as its input arguments
-        -your keyword doesn't have to be "self", but is usually used in the literature
-            
-        -The order you define things in your constructor is the order that you can define those variables when defining your object 
-            -ex: part = p.Particle(34,234,5423) will define part.c = 34, part.m = 234, and part.r = 5423.
+    -All your functions that you define within a class should take the same keyword as its input arguments
+        -your keyword doesn't have to be "self", but is usually used in the literature    
+    -The order you define things in your constructor is the order that you can define those variables when defining your object 
+        -ex: part = p.Particle(34,234,5423) will define part.c = 34, part.m = 234, and part.r = 5423
+
+-Methods are functions tied to class definitions
+    -all methods are functions, but not all functions are methods
