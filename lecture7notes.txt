@@ -11,4 +11,24 @@ Lecture 7- Classes and Objects
     -"a" has various attributes, which are variables associated with an object
         -ex: a.real is an attribute of "a"
         -ex: a.__abs__ gives absolute value of "a" and is a method of class "int()"
-    
+    - "__" = "dunder" , which are "magic objects/attributes" that live in user-controlled namespaces. 
+        -DON'T INVENT THESE YOURSELF
+        -Try to use built in functions instead of dunder methods
+            -ex: "abs(a)" instead of "a.__abs__"
+            
+
+-You can define instance variables associated with an object outside of the class constructor
+    -in other words, once you define a class you can define a parameter that will have a different value for each instance of the object
+        -ex: add "radius" to objects created with class "particle"
+
+-You should initialize all instance variables that you plan on using in your __init__ function within your class with a default value so you can use them when you need them
+    -you need to define an __init__ (known as the constructor) in the class to so this
+    -if you define a variable not associated with the instance being operated upon, it will not be bound to anything
+        -ex: if you create a file "particle.py" with "class Particle(object):" in it, and then you "import particle as p" and then define "part = p.Particle":
+            -if you do def __init__(self) and then within define self.c = 1, self.m = 2, self.r = 3, and then blah = 0, when you create an object it will have attributes c, m, and r, but not blah because blah is a local variable instide __init__
+                -i.e.: particle.blah does not exist
+        -All your functions that you define within a class should take the same keyword as its input arguments
+        -your keyword doesn't have to be "self", but is usually used in the literature
+            
+        -The order you define things in your constructor is the order that you can define those variables when defining your object 
+            -ex: part = p.Particle(34,234,5423) will define part.c = 34, part.m = 234, and part.r = 5423.
