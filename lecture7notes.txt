@@ -1,0 +1,14 @@
+Lecture 7- Classes and Objects
+
+-Defines functions to exist associated with a specific object
+    -effectively is a generator for a set of specific objects
+-can inheret things across classes
+
+-Everything in Python is an object
+
+-Example: define integer a=1
+    -Int() is a class, and we have defined an single instance, or an object, "a" in the class "Int()"
+    -"a" has various attributes, which are variables associated with an object
+        -ex: a.real is an attribute of "a"
+        -ex: a.__abs__ gives absolute value of "a" and is a method of class "int()"
+    
