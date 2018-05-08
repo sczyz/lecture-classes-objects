@@ -34,3 +34,15 @@ Lecture 7- Classes and Objects
 
 -Methods are functions tied to class definitions
     -all methods are functions, but not all functions are methods
+    
+-Duck typing: the attributes you define in different classes and are associated with different objects can still be combined or modified together
+    -ex: if you define a class "Fermion" in file "fermion.py" and a class "Quark" in file "quark.py" and both define the objects created by said classes to have a property ".c" (for charge) and tried to sum particles "proton1 = fermion.Fermion()" and "quark1 = quark.Quark()" you could do "totalcharge = proton1.c + quark1.c" and it would work
+    -if you define a method in one class and the other class has some attribute that is shared with the first class, you could use that method to operate on both classes together if that method calls both objects
+
+-When you create subclasses, it inherits all the functions and data of the parent class
+    -however, you must keep in mind that if you redefine a function in subclass it will overwrite the parent class' version of that function
+        -ex: if you write an __init__ function in the parent class that defines "shape", and then you also define an __init__ function in the subclass that defines "size" and try to call "shape" from an object created with the subclass it will not work
+        -This can me rectified by adding the line "super().<functionname>(**kwds)" into your function
+            -super() is a built-in python function
+            -ex: super().__init__(**kwds)
+            
